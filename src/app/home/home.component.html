@@ -1,0 +1,66 @@
+<ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let image of images">
+        <div class="carousel-wrapper">
+            <img class="slider-image" src="assets/{{image.name}}" [alt]="image.caption">
+            <div class="caption">
+                <h2>{{image.heading}}</h2>
+                <p>{{image.caption}}</p>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+<section class="info-home">
+    <h2>Welcome to Luyana Guesthouse, where elegance meets comfort in the heart of Kroonstad. Our beautifully renovated
+        property offers a perfect blend of modern amenities and timeless charm, ensuring an unforgettable stay for every
+        guest.</h2>
+    <p>Our guesthouse boasts 8 uniquely styled en-suite rooms, each designed with your comfort in mind. Whether you
+        prefer a contemporary feel or a touch of classic elegance, you’ll find the perfect space to relax and unwind.
+        Every room features a smart TV, air conditioning, and a cozy electric blanket, making it your personal haven no
+        matter the season.</p>
+    <p>At Luyana Guesthouse, we believe that your stay should be as stress-free as possible. That’s why we offer
+        complimentary high-speed Wi-Fi throughout the property, free private parking, and a shared lounge where you can
+        socialize with other guests or simply relax with a book.</p>
+</section>
+<div class="room-intro">
+    <h2>Our Rooms</h2>
+    <p>
+        Each of our beautifully appointed rooms at Luyana Guesthouse is designed for your utmost comfort. Enjoy modern
+        amenities including air conditioning, a smart TV, and a cozy electric
+        blanket for those chilly nights. Every room also features a convenient mini refrigerator, perfect for
+        keeping your drinks and snacks fresh. With an en-suite bathroom and thoughtful touches throughout, our rooms
+        provide
+        a peaceful retreat where you can relax and unwind.</p>
+</div>
+<section class="room-flex">
+    <section class="rooms" *ngFor="let room of rooms">
+        <a routerLink="{{room.path}}"><img src="assets/{{room.name}}" alt="image of room"></a>
+        <h2>{{room.heading}}</h2>
+        <section class="feature-flex">
+            <div>
+                <div><img class="feature-pic" src="assets/{{room.image_one}}" alt="Bed Picture">{{room.desc_one}} </div>
+                <br>
+                <div><img class="feature-pic" src="assets/{{room.image_two}}" alt="TV Picture"> {{room.desc_two}}</div>
+                <br>
+                <div> <img class="feature-pic" src="assets/{{room.image_three}}" alt="Wifi Symbol"> {{room.desc_three}}
+                </div>
+            </div>
+        </section>
+        <div class="price">{{room.price}}</div>
+        <div class="borderline"></div>
+        <a routerLink="/contacts"><button>{{room.button}}</button></a>
+    </section>
+</section>
+<h2 id="h2">Features Available</h2>
+<section class="flex-display">
+    <section class="feature-list" *ngFor="let feature of features">
+        <img src="assets/{{feature.picture}}" alt="feature picture">
+        <h2>{{feature.heading}}</h2>
+        <p>{{feature.desc}}</p>
+    </section>
+</section>
+<section class="scrolling-image">
+    <div class="booking-button">
+        <h2>Book Your Stay at Luyana Guesthouse Today!</h2>
+        <a href="contacts"><button>Book Room</button></a>
+    </div>
+</section>

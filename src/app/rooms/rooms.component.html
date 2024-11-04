@@ -1,0 +1,32 @@
+<div class="room-intro">
+    <h2>Our Rooms</h2>
+    <p>
+        Each of our beautifully appointed rooms at Luyana Guesthouse is designed for your utmost comfort. Enjoy modern
+        amenities including air conditioning, a smart TV, and a cozy electric
+        blanket for those chilly nights. Every room also features a convenient mini refrigerator, perfect for
+        keeping your drinks and snacks fresh. With an en-suite bathroom and thoughtful touches throughout, our rooms
+        provide
+        a peaceful retreat where you can relax and unwind.</p>
+</div>
+<section class="room-flex">
+    <section class="rooms" *ngFor="let room of rooms">
+        <a routerLink="{{room.path}}"><img src="assets/{{room.name}}" alt="image of room"></a>
+        <h2>{{room.heading}}</h2>
+        <section class="feature-flex">
+            <div>
+                <div><img class="feature-pic" src="assets/{{room.image_one}}" alt="Bed Picture">{{room.desc_one}} </div>
+                <br>
+                <div><img class="feature-pic" src="assets/{{room.image_two}}" alt="TV Picture"> {{room.desc_two}}</div>
+                <br>
+                <div> <img class="feature-pic" src="assets/{{room.image_three}}" alt="Wifi Symbol"> {{room.desc_three}}
+                </div>
+            </div>
+        </section>
+        <div class="price">{{room.price}}</div>
+        <div class="borderline"></div>
+        <div class="bokoharam">
+            <a routerLink="/contacts"><button>{{room.button}}</button></a>
+        </div>
+        
+    </section>
+</section>

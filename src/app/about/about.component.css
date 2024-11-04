@@ -1,0 +1,213 @@
+.about-top img {
+    width: 50%;
+    height: 30vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 0.5rem;
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 64rem) { 
+        width: 60vw;
+        height: 40vw;
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+.about-top {
+    /* display: flex; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 4rem;
+    padding: 3rem;
+
+    @media (max-width: 64rem) {
+        display: flex;
+        flex-direction: column;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 0rem;
+    padding: 0rem;
+    margin-top: 1.5rem;
+    }
+}
+.about-top div {
+    margin-left: 0rem;
+    @media (max-width: 64rem) { 
+        margin-left: 0;
+        text-align: center;
+        padding: 1rem
+    }
+}
+.about-top p {
+    line-height: 2rem;
+}
+.about-top h2 {
+    font-size: 2rem;
+}
+.room-intro {
+    text-align: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    line-height: 2rem;
+    margin-top: 6rem;
+    @media (max-width: 64rem) {
+        padding: 0;
+    }
+}
+.room-intro h2 {
+    font-size: 2rem;
+}
+.room-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.rooms {
+    margin: 1rem;
+    width: 20vw;
+}
+
+.rooms img {
+    max-width: 20vw;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.rooms h2 {
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+.rooms div img {
+    width: 1.5rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.feature-flex div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem;
+    @media (max-width: 35rem) {
+        flex-direction: column;
+    }
+}
+.feature-pic {
+    margin-right: 0.2rem;
+}
+.price {
+    text-align: center;
+    background-color: rgb(102, 88, 9);
+    width: 5.5rem;
+    color: white;
+    font-weight: 500;
+    margin: 0 auto;
+    border-radius: 0.4rem;
+    margin-bottom: 3rem;
+}
+.rooms button {
+    background-color: rgb(0, 81, 255);
+    color: white;
+    border-color: rgb(0, 81, 255);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+.borderline {
+    border: 0.8px solid silver
+}
+.bokoharam {
+    display: flex;
+    justify-content: center;
+}
+.review-section img {
+ width: 100%;
+ height: 40rem;
+ filter: blur(1px);
+}
+.review-section {
+    background-image: url("/assets/brick.jpg");
+    height: 30rem;
+    background-size: cover;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.top-heading {
+    padding-top: 4rem;
+    font-size: 2rem;
+    padding-bottom: 4rem;
+}
+ ngb-carousel p {
+    font-size: 1.1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    @media (max-width: 64rem) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+ngb-carousel h2 {
+    font-size: 1.3rem;
+}
+.feature-list img {
+    width: 8rem;
+}
+.flex-display {
+    display: flex;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 65vw;
+}
+#h2 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+.feature-list {
+    text-align: center;
+    padding: 3.5rem;
+    border: 1px solid rgba(121, 109, 45, 0.26);
+    border-radius: 1rem;
+    width: 30rem;
+    margin: 3rem;
+}
+@media only screen and (max-width: 64rem) {
+    .room-flex {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0rem;
+       justify-content: center;
+        /* margin: 4rem; */
+        padding-left: 0rem;
+        padding-right: 0rem;
+        
+    }
+    .rooms img {
+        max-width: 60vw;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .rooms {
+        width: 60vw;
+    }
+    .flex-display {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+        margin: 0;
+        width: 65vw;
+    }
+    .feature-list {
+        width: 65vw;
+    }
+    .borderline {
+        border: 0.8px solid silver;
+        width: 60vw;
+    }
+}
+

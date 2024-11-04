@@ -1,0 +1,62 @@
+<section class="room-layout">
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of pictures">
+            <div class="carousel-wrapper">
+                <img class="slider-image" src="assets/{{image.name}}" alt="image">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    <section class="desc">
+        <h2>Room Services</h2>
+        <section class="features">
+            <div>
+                <div class="image-desc">
+                    <img src="assets/temperature.svg" alt="aircon icon">
+                    <p>Air-Conditioned</p>
+                </div>
+                <div class="image-desc">
+                    <img src="assets/tv-solid.svg" alt="TV icon">
+                    <p>Smart TV</p>
+                </div>
+                <div class="image-desc">
+                    <img src="assets/wifi-solid.svg" alt="Wifi icon">
+                    <p>Free Wi-Fi</p>
+                </div>
+            </div>
+            <div>
+                <div class="image-desc">
+                    <img src="assets/shower.svg" alt="shower icon">
+                    <p>Shower</p>
+                </div>
+                <div class="image-desc">
+                    <img src="assets/microwave.png" alt="microwave icon">
+                    <p>Microwave</p>
+                </div>
+                <div class="image-desc">
+                    <img src="assets/fridge.png" alt="fridge icon">
+                    <p>Bar Fridge</p>
+                </div>
+            </div>
+        </section>
+        <section class="para">
+            <p>Our elegantly designed rooms at Luyana Guesthouse offer everything you need for a comfortable and
+                relaxing
+                stay.
+                Each room features a plush bed with premium linens, air conditioning to keep you cool, and a smart TV
+                for
+                your
+                entertainment needs. You’ll also find a mini refrigerator, perfect for storing drinks and snacks, as
+                well as
+                an
+                electric blanket to keep you warm on cooler nights. The en-suite bathroom is equipped with modern
+                fixtures
+                and
+                complimentary toiletries, ensuring a luxurious experience. With thoughtful touches throughout, our rooms
+                provide
+                the perfect retreat after a day of exploring Kroonstad.</p>
+            <div>
+                <a routerLink="/contacts"><button>BOOK ROOM</button></a>
+            </div>
+        </section>
+    </section>
+</section>

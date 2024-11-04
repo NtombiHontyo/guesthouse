@@ -1,0 +1,78 @@
+<section class="about-top">
+    <img src="assets/braaiareaa.webp" alt="braai area">
+    <div>
+        <h2>Hospitality Meets Comfort</h2>
+        <p>Welcome to Luyana Guesthouse, where hospitality meets comfort in the heart of Kroonstad. Our guesthouse is
+            more than
+            just a place to stay; it’s a sanctuary designed for relaxation,
+            luxury, and unforgettable experiences. With 8 uniquely styled en-suite rooms, we offer the perfect blend of
+            modern
+            amenities and charming details to suit every guest’s taste.
+            Whether you're here for a quick getaway or an extended stay, our dedicated team is committed to making your
+            time
+            with us as pleasant and memorable as possible. From the moment you arrive, you’ll be greeted with warmth and
+            personalized service, ensuring that you feel right at home.</p>
+        <p>At Luyana Guesthouse, we take pride in creating an environment that allows our guests to unwind and enjoy the
+            finer
+            things in life. Our beautifully landscaped garden, cozy shared spaces,
+            and thoughtfully designed rooms are all tailored to provide a serene and inviting atmosphere. We believe
+            that the
+            little touches, like our air-conditioned rooms with smart TVs, complimentary
+            high-speed Wi-Fi, and our delightful outdoor braai area, make all the difference. Whether you're exploring
+            the local
+            attractions or simply relaxing in our sunroom by the fireplace, we strive to provide an experience that will
+            linger
+            in your memory long after your stay. Come and discover why Luyana Guesthouse is the preferred choice for
+            travelers
+            seeking comfort, elegance, and a true sense of home away from home.</p>
+    </div>
+</section>
+<div class="room-intro">
+    <h2>Our Rooms</h2>
+    <p>
+        Each of our beautifully appointed rooms at Luyana Guesthouse is designed for your utmost comfort. Enjoy modern
+        amenities including air conditioning, a smart TV, and a cozy electric
+        blanket for those chilly nights. Every room also features a convenient mini refrigerator, perfect for
+        keeping your drinks and snacks fresh. With an en-suite bathroom and thoughtful touches throughout, our rooms
+        provide
+        a peaceful retreat where you can relax and unwind.</p>
+</div>
+<section class="room-flex">
+    <section class="rooms" *ngFor="let room of rooms">
+        <a routerLink="{{room.path}}"><img src="assets/{{room.name}}" alt="image of room"></a>
+        <h2>{{room.heading}}</h2>
+        <section class="feature-flex">
+            <div>
+                <div><img class="feature-pic" src="assets/{{room.image_one}}" alt="Bed Picture">{{room.desc_one}} </div>
+                <br>
+                <div><img class="feature-pic" src="assets/{{room.image_two}}" alt="TV Picture"> {{room.desc_two}}</div>
+                <br>
+                <div> <img class="feature-pic" src="assets/{{room.image_three}}" alt="Wifi Symbol"> {{room.desc_three}}
+                </div>
+            </div>
+        </section>
+        <div class="price">{{room.price}}</div>
+        <div class="borderline"></div>
+        <div class="bokoharam">
+            <a routerLink="/contacts"><button>{{room.button}}</button></a>
+        </div>
+    </section>
+</section>
+<section class="review-section">
+    <h2 class="top-heading">Guest Reviews</h2>
+    <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let review of reviews">
+            <h2>{{review.heading}}</h2>
+            <p>{{review.desc}}</p>
+            <p><strong>{{review.name}}</strong></p>
+        </ng-template>
+    </ngb-carousel>
+</section>
+<h2 id="h2">Features Available</h2>
+<section class="flex-display">
+    <section class="feature-list" *ngFor="let feature of features">
+        <img src="assets/{{feature.picture}}" alt="feature picture">
+        <h2>{{feature.heading}}</h2>
+        <p>{{feature.desc}}</p>
+    </section>
+</section>

@@ -1,0 +1,58 @@
+<div class="background-top"></div>
+<div class="main-container">
+  <header>
+    <div>
+      <img class="top-logo" src="assets\Logo.jpg" alt="Luyana Guesthouse Logo" />
+    </div>
+    <nav>
+      <button id="menu-small" (click)="toggleMenu()">
+        <i class="material-icons"> {{ isMenuOpen ? "close" : "menu"}}</i>
+      </button>
+      <ul class="nav-top" [class.is-open]="isMenuOpen" id="menu-items">
+        <li><a class="nav-item" routerLink="home">Home</a></li>
+        <li><a class="nav-item" routerLink="about">About</a></li>
+        <li><a class="nav-item" routerLink="rooms">Rooms</a></li>
+        <li><a class="nav-item" routerLink="gallery">Gallery</a></li>
+        <li><a class="nav-item" routerLink="contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <router-outlet></router-outlet>
+  <footer>
+    <section class="footer-top-part">
+      <div class="logo-slogan">
+        <div>
+          <img src="assets/Logooo.webp" alt="Company logo" />
+        </div>
+        <p>
+          Stay, Relax, Remember – Unwind at Luyana Guesthouse.
+        </p>
+      </div>
+      <div class="contact-footer">
+        <h2>CONTACT US</h2>
+        <p>58 Sarel Cilliers Street, Kroonstad</p>
+        <p>032 726 0231 | 081 194 5945</p>
+        <p>admin{{ "@" }}luyanaguesthouse.co.za</p>
+        <br>
+        <a href="assets/Approval_Certificate.pdf"><img src="assets/gradingf.webp" alt="grading rate (four)"></a>
+      </div>
+      <div class="links-footer">
+        <h2>QUICK LINKS</h2>
+        <ul>
+          <li><a routerLink="home">Home</a></li>
+          <li><a routerLink="about">About</a></li>
+          <li><a routerLink="rooms">Rooms</a></li>
+          <li><a routerLink="gallery">Gallery</a></li>
+          <li><a routerLink="contacts">Contacts</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="footer-bottom">
+        &copy; 2020 Copyright: <a routerLink="home">luyanaguesthouse.co.za</a>
+      </div>
+    </section>
+  </footer>
+</div>
+<script src="header.js"></script>

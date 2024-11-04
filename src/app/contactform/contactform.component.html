@@ -1,0 +1,40 @@
+<mat-card>
+    <form [formGroup]="ClientForm" (ngSubmit)="onSubmit()">
+        <h1>Drop us a mail</h1>
+        <div class="half-space">
+            <mat-form-field>
+                <input class="full-name" type="text" formControlName="fullName" MatFormFieldControl required minlength="3"
+                    placeholder="Full Name" />
+            </mat-form-field>
+            <mat-form-field>
+                <input type="email" formControlName="email" MatFormFieldControl required minlength="3"
+                    placeholder="Email" />
+            </mat-form-field>
+        </div>
+        <mat-form-field>
+            <input class="big-space subject" type="text" formControlName="subject" MatFormFieldControl required minlength="3"
+                placeholder="Subject" />
+        </mat-form-field>
+        <mat-form-field class="message">
+            <textarea class="big-space" matInput rows="4" formControlName="message" MatFormFieldControl required
+                placeholder="Message"></textarea>
+        </mat-form-field>
+        <button mat-raised-button type="submit" [disabled]="!ClientForm.valid">
+            Send
+        </button>
+    </form>
+    <div class="info-contact">
+        <div>
+            <img src="assets/location-pin-solid.svg" alt="location pin" />
+            <p>58 Sarel Cilliers Street, Kroonstad</p>
+        </div>
+        <div>
+            <img src="assets/phone-flip-solid.svg" alt="telephone" />
+            <p>032 726 0231 | 081 194 5945</p>
+        </div>
+        <div>
+            <img src="assets/envelope-solid.svg" alt="email icon" />
+            <p>admin{{ "@" }}luyanaguesthouse.co.za</p>
+        </div>
+    </div>
+</mat-card>
